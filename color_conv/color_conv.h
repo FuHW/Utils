@@ -13,7 +13,15 @@ typedef struct {
     unsigned char v;    // [0,255]
 } HSV;
 
+typedef struct {
+    unsigned short h;   // [0,360]
+    unsigned char s;    // [0,255]
+    unsigned char l;    // [0,255]
+} HSL;
+
 HSV rgb_to_hsv(RGB rgb);
 RGB hsv_to_rgb(HSV hsv);
+HSL rgb_to_hsl(RGB rgb);
+RGB hsl_to_rgb(HSL hsl);
 
 #endif
